@@ -220,16 +220,16 @@ p {
 
 
 
-/* Team Member Container 
+/* Team Member Container */
 .member {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 2rem;
     width: 250px; /* Adjust as needed */
-}*/
+}
 
-/* Image Container - Fixed size with centered image
+/* Image Container - Fixed size with centered image*/
 .member-img-container {
     width: 200px;
     height: 200px;
@@ -238,7 +238,7 @@ p {
     margin-bottom: 1rem;
     border: 3px solid #fff; /* Optional border */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional shadow */
-} */
+} 
 
 /* Image - Will auto-adjust to fit container */
 .member-img-container img {
@@ -403,7 +403,7 @@ p {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.news-img {
+.news-img img{
   max-width: 100%;
   max-height: 100%;
   object-fit: cover;
