@@ -229,7 +229,7 @@ p {
     width: 250px; /* Adjust as needed */
 }*/
 
-/* Image Container - Fixed size with centered image */
+/* Image Container - Fixed size with centered image
 .member-img-container {
     width: 200px;
     height: 200px;
@@ -238,16 +238,16 @@ p {
     margin-bottom: 1rem;
     border: 3px solid #fff; /* Optional border */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional shadow */
-}
+} */
 
-/* Image - Will auto-adjust to fit container
+/* Image - Will auto-adjust to fit container */
 .member-img-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
 }
- */
+
 
 /* Member Info - Text below image */
 .member-info {
