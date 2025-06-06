@@ -45,7 +45,7 @@ header { /*Defining layout style for header tag in html here*/
 }
 
 .star-bg {
-  background: url('/api/images/neutron_star.jpg') no-repeat center center;
+  background: url('api/images/Neutron_star.jpg') no-repeat center center;
   background-size: cover;
   filter: brightness(70%); /* Not too dark, preserves image colors */
   position: absolute;
@@ -104,7 +104,7 @@ nav { /*Navigation bar layout setting*/
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 40px 60px;
 }
 
 .hero {
@@ -180,7 +180,7 @@ p {
 
 .research-area {
   background-color: white;
-  border-radius: 5px;
+  border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
@@ -188,6 +188,21 @@ p {
 
 .research-area:hover {
   transform: translateY(-5px);
+}
+
+.research-img figure {
+    margin: 0; /* Resets default browser margins for figure, if any */
+    padding: 0;
+    position: relative; /* Useful if you want to absolutely position the caption within the figure later */
+}
+
+.research-img figcaption {
+    font-size: 0.8em;       /* Make it a bit smaller */
+    font-style: italic;     /* Common style for captions */
+    text-align: center;      /* Or center, or left, as you prefer */
+    margin-top: -10px;        /* Add some space between the image and caption */
+    color: #555;           /* A slightly dimmer color */
+    padding: 0 5px;         /* Some padding if you want it inset from image edges */
 }
 
 .research-img {
@@ -200,7 +215,7 @@ p {
 }
 
 .research-content {
-  padding: 20px;
+  padding: 40px;
 }
 
 .team {
@@ -216,9 +231,6 @@ p {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
-
-
-
 
 /* Team Member Container */
 .member {
@@ -268,69 +280,6 @@ p {
 .cv-link:hover {
   background-color: #004c99;
 }
-/*
-.member-img-tarun {
-  width: 300px;         // Increased width
-  height: 300px;        // Increased height
-  overflow: hidden;     // Prevents image from spilling out
-  border-radius: 10px;  // Optional: slight rounded corners
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 10px;  // Spacing below the image
-}
-
-.member-img-tarun img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;    // Keeps aspect ratio and fills the box
-  display: block;
-}
-.member-img-prashant {
-  height: 350px;
-  width: 100%;
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.member-img-aravind {
-  width: 400px;
-  height: 300px;
-  overflow: hidden;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 10px;
-}
-.member-img-aravind img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-.member-img-harsh {
-  width: 300px;
-  height: 400px;
-  overflow: hidden;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 10px;
-}
-.member-img-harsh img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-*/
-
-
-
 
 .member-info {
   padding: 20px;
