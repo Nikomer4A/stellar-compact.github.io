@@ -1,0 +1,599 @@
+/*Setting the global colour scheme below through root that will be used throughout this file*/
+:root {
+  --primary-color: #1a3a6d;
+  --secondary-color: #0f2a4f;
+  --accent-color: #e67e22;
+  --text-color: #333;
+  --light-color: #f9f9f9;
+  --dark-color: #222;
+}
+
+* {
+  margin: 0; /*Removing default margins and padding applied by browsers to ensure pan browser compatibility*/
+  padding: 0;
+  box-sizing: border-box; /*any new box added in layout will automatically adjust to that browser's design*/
+}
+
+body { /*Defining layout style to be used within body tag here*/
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /*List of fonts for browser to use depending on which one is available to it*/
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--light-color);
+}
+
+header { /*Defining layout style for header tag in html here*/
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  padding: 20px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+
+.header-content {/*Defines what text, margins, padding etc will look like within header layout*/
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.star-bg {
+  background: url('/api/images/neutron_star.jpg') no-repeat center center;
+  background-size: cover;
+  filter: brightness(70%); /* Not too dark, preserves image colors */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+
+nav { /*Navigation bar layout setting*/
+  background-color: var(--secondary-color);
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container { /*What text and design within Navigation bar is supposed to look like*/
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo { /*Currently logo is set to NSRG in index.html*/
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links { /*font and formatting link style for links to be clicked on in navigation bar*/
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--accent-color);
+}
+
+/*Will add more documentation later, documentation for index.html is complete however*/
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #d35400;
+}
+
+section {
+  margin-bottom: 60px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+  position: relative;
+  padding-bottom: 10px;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 3px;
+  background-color: var(--accent-color);
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+.research-areas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 10px;
+}
+
+.research-area {
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.research-area:hover {
+  transform: translateY(-5px);
+}
+
+.research-img {
+  height: 310px;
+  width: 290px;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.research-content {
+  padding: 20px;
+}
+
+.team {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.member {
+  background-color:white;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+
+
+
+/* Team Member Container */
+.member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    width: 250px; /* Adjust as needed */
+}
+
+/* Image Container - Fixed size with centered image */
+.member-img-container {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* Makes it circular - remove if you want square */
+    overflow: hidden;
+    margin-bottom: 1rem;
+    border: 3px solid #fff; /* Optional border */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional shadow */
+}
+
+/* Image - Will auto-adjust to fit container */
+.member-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Member Info - Text below image */
+.member-info {
+    text-align: center;
+    width: 100%;
+}
+
+.cv-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 12px;
+  background-color: #0066cc;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.cv-link:hover {
+  background-color: #004c99;
+}
+/*
+.member-img-tarun {
+  width: 300px;         // Increased width
+  height: 300px;        // Increased height
+  overflow: hidden;     // Prevents image from spilling out
+  border-radius: 10px;  // Optional: slight rounded corners
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;  // Spacing below the image
+}
+
+.member-img-tarun img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;    // Keeps aspect ratio and fills the box
+  display: block;
+}
+.member-img-prashant {
+  height: 350px;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.member-img-aravind {
+  width: 400px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.member-img-aravind img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.member-img-harsh {
+  width: 300px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.member-img-harsh img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+*/
+
+
+
+
+.member-info {
+  padding: 20px;
+}
+
+.member-name {
+  font-size: 1.3rem;
+  margin-bottom: 17px;
+  color: var(--primary-color);
+}
+
+.member-role {
+  color: var(--accent-color);
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.publications-list {
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.publication {
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.publication:last-child {
+  border-bottom: none;
+}
+
+.pub-title {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.pub-authors {
+  font-style: italic;
+  color: #666;
+  margin: 5px 0;
+}
+
+.pub-journal {
+  color: #888;
+}
+
+.pub-link {
+  display: inline-block;
+  color: var(--accent-color);
+  margin-top: 5px;
+  text-decoration: none;
+}
+
+.pub-link:hover {
+  text-decoration: underline;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.news-item {
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.news-img img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+.news-content {
+  padding: 20px;
+}
+
+.news-date {
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.news-title {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.contact-info, .contact-form {
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+}
+
+.contact-info i {
+  color: var(--accent-color);
+  margin-right: 10px;
+  width: 20px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.form-group textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.submit-btn {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #d35400;
+}
+
+footer {
+  background-color: var(--dark-color);
+  color: white;
+  padding: 50px 0 20px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-section h4 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-section h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background-color: var(--accent-color);
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #bbb;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-icon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.social-icon:hover {
+  background-color: var(--accent-color);
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 30px;
+  color: #bbb;
+  font-size: 0.9rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-top: 1px solid #333;
+  margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-container {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    margin-top: 15px;
+  }
+
+  .nav-links li {
+    margin: 0 10px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+}
