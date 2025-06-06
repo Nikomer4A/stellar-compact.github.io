@@ -241,7 +241,7 @@ p {
 } 
 
 /* Image - Will auto-adjust to fit container */
-.member-img-container img {
+.member-img-container {
     width: 100%;
     height: 100%;
     object-fit: cover;
