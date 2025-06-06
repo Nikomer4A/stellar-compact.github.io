@@ -220,14 +220,14 @@ p {
 
 
 
-/* Team Member Container */
+/* Team Member Container 
 .member {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 2rem;
     width: 250px; /* Adjust as needed */
-}
+}*/
 
 /* Image Container - Fixed size with centered image */
 .member-img-container {
@@ -403,7 +403,7 @@ p {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.news-img img {
+.news-img {
   max-width: 100%;
   max-height: 100%;
   object-fit: cover;
