@@ -45,7 +45,7 @@ header { /*Defining layout style for header tag in html here*/
 }
 
 .star-bg {
-  background: url('api/images/Neutron_star.jpg') no-repeat center center;
+  background: url('./images/Neutron_star.jpg') no-repeat center center;
   background-size: cover;
   filter: brightness(70%); /* Not too dark, preserves image colors */
   position: absolute;
