@@ -14,11 +14,14 @@
   box-sizing: border-box; /*any new box added in layout will automatically adjust to that browser's design*/
 }
 
+
+
 body { /*Defining layout style to be used within body tag here*/
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /*List of fonts for browser to use depending on which one is available to it*/
   line-height: 1.6;
   color: var(--text-color);
   background-color: var(--light-color);
+
 }
 
 header { /*Defining layout style for header tag in html here*/
@@ -28,9 +31,6 @@ header { /*Defining layout style for header tag in html here*/
   position: relative;
   overflow: hidden;
 }
-
-
-
 
 .header-content {/*Defines what text, margins, padding etc will look like within header layout*/
   position: relative;
@@ -45,7 +45,7 @@ header { /*Defining layout style for header tag in html here*/
 }
 
 .star-bg {
-  background: url('api/images/Neutron_star.jpg') no-repeat center center;
+  background: url('/api/images/Neutron_star.jpg') no-repeat center center;
   background-size: cover;
   filter: brightness(70%); /* Not too dark, preserves image colors */
   position: absolute;
@@ -54,6 +54,7 @@ header { /*Defining layout style for header tag in html here*/
   right: 0;
   bottom: 0;
   z-index: 1;
+
 }
 
 
@@ -206,8 +207,8 @@ p {
 }
 
 .research-img {
-  height: 310px;
-  width: 290px;
+  height: 100%/*310px;*/
+  width: 100%/*290px;*/
   background-color: #ddd;
   display: flex;
   align-items: center;
